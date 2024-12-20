@@ -10,7 +10,7 @@ with open('ai.pkl','rb') as f:
 def home():
     return "API Server Running"
 
-@api.route('/predict',methods='[get]')
+@api.route('/predict',methods=['GET'])
 def predict():
     N=request.args.get('N')
     N=float(N)
